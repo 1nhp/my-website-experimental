@@ -1,0 +1,79 @@
+
+.overlay{
+    background-image: radial-gradient(circle, #1051a1bd, #000000);
+	position: fixed;
+	inset: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	z-index: 9999;
+	user-select: none;
+    transition: 0.5s;
+}
+
+.overlay-content{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: fade-in 0.5s ease-out;
+    transition: 0.5s;
+}
+
+.overlay-heading{
+    margin-bottom: 15px;
+    font-family: "Aracne Condensed Regular";
+    color: var(--color1);
+    text-align: center;
+    font-size: clamp(2rem, 3vw, 3rem);
+    transform: scaleY(1.1);
+}
+
+.overlay-p{
+    overflow-wrap: break-word;
+    width: 30%;
+    margin-top: 10px;
+    text-align: center;
+    font-size: clamp(0.9rem, 3vw, 1.3rem);
+    font-family: sans-serif;
+}
+
+.overlay-line {
+    width: min(750px, 90%);
+    height: 7px;
+    background:
+        radial-gradient(circle, var(--color2) 35%, transparent 45%)
+        repeat-x;
+    background-size: 25px 8px;
+    border: none;
+}
+
+@keyframes fade-in {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@keyframes globe_scale_up{
+    0%{scale: 0;}
+    10%{scale: 1.5;}
+    20%{scale: 0.8;}
+    30%{scale: 1.05;}
+    35%{scale: 0.85;}
+    45%{scale: 1.08;}
+    55%{scale: 0.95;}
+    60%{scale: 1;}
+}
+
+.overlay-loading-globe-icon{
+    position: relative;
+    top: 20px;
+    animation: globe_scale_up 1.5s ease-out;
+}
+
+.overlay-buttons{
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+}
