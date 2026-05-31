@@ -1,66 +1,61 @@
-const pod_navi = document.querySelector(".pod-nav") 
+// Pod menu references fetched once
 const overlaycontent = document.querySelector(".overlay-content");
 const overlay = document.querySelector(".overlay");
-const pod_gui_projects = document.querySelector(".pod-gui-projects")
-const pod_gui_blog = document.querySelector(".pod-gui-blog")
-const pod_gui_about_me = document.querySelector(".pod-gui-about-me")
-const pod_gui_contact = document.querySelector(".pod-gui-contact")
-const pod_gui_stuff = document.querySelector(".pod-gui-stuff")
-const pod_gui_links = document.querySelector(".pod-gui-links")
-
-window.pod_navi = document.querySelector(".pod-nav");
-window.pod_gui_blog = document.querySelector(".pod-gui-blog");
-window.pod_gui_about_me = document.querySelector(".pod-gui-about-me");
-window.pod_gui_projects = document.querySelector(".pod-gui-projects")
-window.pod_gui_contact = document.querySelector(".pod-gui-projects")
-window.pod_gui_stuff = document.querySelector(".pod-gui-stuff")
-window.pod_gui_links = document.querySelector(".pod-gui-links")
-
-pod_navi.style.display = "none"
-pod_gui_projects.style.display = "none"
-pod_gui_blog.style.display = "none"
-pod_gui_about_me.style.display = "none"
-pod_gui_contact.style.display = "none"
-pod_gui_stuff.style.display = "none"
-pod_gui_links.style.display = "none"
 
 function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function switch_ui(prev, next, time = 100) {
-    if (prev) {
-        prev.style.scale = '0';
-        prev.style.filter = 'blur(30px)';
-        prev.style.zIndex = "-9";
-        prev.style.opacity = "0"
-        await delay(400);
-        prev.style.display = "none"
+async function switch_ui(prev, next, type) {
+    const prev_el = document.getElementById(prev);
+    if (!prev_el) return;
+
+    prev_el.style.transform = "scale(0)";
+    prev_el.style.filter = "blur(30px)";
+
+    await delay(400);
+    deleteMenu(prev);
+
+    let next_el;
+
+    if (type === "pod") {
+        createPodNav();
+
+        const pod_nav = document.getElementById("pod-nav");
+        if (pod_nav) {
+            pod_nav.style.transform = "scale(0)";
+        }
+    } else {
+        createWindow(next);
     }
 
-    next.style.display = 'flex';
-    next.style.scale = '0';
-    next.style.filter = 'blur(30px)';
-    next.offsetHeight;
-    next.style.scale = '1';
-    next.style.filter = 'blur(0px)';
-    next.style.zIndex = "9999"
-    next.style.opacity = 1
+    next_el = document.getElementById(next);
+    if (!next_el) return;
+
+    next_el.style.transform = "scale(0)";
+    next_el.style.filter = "blur(10px)";
+    await delay(100);
+    next_el.style.transform = "scale(1)";
+    next_el.style.filter = "blur(0)";
 }
 
 window.addEventListener("click", async () => {
-    playsound("audio/pod_select.wav", 0.5)
+    playsound(pod_select, 0.5)
     overlaycontent.style.opacity = "0";
     overlaycontent.style.transform = "scale(0)";
 
     await delay(400);
     overlay.style.opacity = 0
-    playsound("audio/podcomputerenter.ogg", 0.8)
-
+    playsound(podcomputerenter, 0.8)
     
-    switch_ui(pod_gui_projects, pod_navi)
     preloadMusic()
     music(music_amb)
+
+    createPodNav()
+    switch_ui("pod-nav", "pod-nav", "pod");
+
+
     await delay(400);
     overlay.remove()
+
 }, { once: true });

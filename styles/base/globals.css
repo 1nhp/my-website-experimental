@@ -1,0 +1,35 @@
+/* Theme colors */
+:root{
+    --color-green-500: rgb(151, 204, 47);
+    --color-green-300: rgb(131, 169, 56);
+    --color-cyan-400:rgb(52, 124, 185);
+    --color-cyan-700: rgb(31, 185, 198);
+    --color-green-pod-window-opaque: rgb(151, 204, 47, 0.75);
+    --color-blue-pod-window-opaque: rgb(52, 124, 185, 0.9);
+    --overlay-gradient: radial-gradient(circle, #1051a1bd, #000000)
+}
+
+/* Fonts */
+@font-face {
+  font-family: 'Aracne Condensed Regular';
+  src: url("/assets/fonts/AracneCondensedRegular.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'Eigerdals Heavy';
+  src: url("/assets/fonts/EigerdalsHeavy.woff2") format('woff2');
+}
+
+/* Body styling */
+body{
+    user-select: none;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: "Eigerdals Heavy";
+}
+
+#root{
+    background: url("/assets/images/pod.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+}

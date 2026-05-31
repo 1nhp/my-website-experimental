@@ -2,24 +2,27 @@
 <html>
     <head>
         <title>GlitchyZulfur4's Website</title>
-        <link rel="stylesheet" href="overlay.css"></link>
-        <link rel="stylesheet" href="main.css"></link>
-        <link rel="stylesheet" href="bg.css"></link>
+        <link rel="stylesheet" href="styles/components/overlay.css"></link>
+        <link rel="stylesheet" href="/styles/media.css"></link>
+        <link rel="stylesheet" href="/styles/base/globals.css"></link>
+        <link rel="stylesheet" href="/styles/components/buttons.css"></link>
+        <link rel="stylesheet" href="/styles/layout/containers.css"></link>
         <script src="scripts/main.js" defer></script>
         <script src="scripts/overlay.js" defer></script>
-        <script src="scripts/playsound.js" defer></script>
+        <script src="scripts/sounds.js" defer></script>
         <script src="scripts/button.js" defer></script>
         <script src="scripts/music.js" defer></script>
+        <script src="scripts/menus.js" defer></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
         <meta name="description" content="Welcome to my little big website i hope you found it :D">
         <meta name="google-site-verification" content="">
         <meta name="robots" content="noindex,nofollow">
     </head>
-    <body>
+    <body id="root">
         <div class="overlay">
             <div class="overlay-content">
-                <div><img class="overlay-loading-globe-icon" src="images/earth_loading_icon.png"></div>
+                <div><img class="overlay-loading-globe-icon" src="assets/images/earth_loading_icon.png"></div>
                 <h1 class="overlay-heading">IMPORTANT INFORMATION</h1>
                 <hr class="overlay-line">
                 <p class="overlay-p">This is yet another rewrite of my website its Work In Progress which is why its considered experimental original idea by: DamianBossPL</p>
@@ -32,83 +35,6 @@
                 </div>
         </div>
         <div class="pod-ui">
-
-            <div class="pod-gui-projects pod-window">
-                    <h1 class="pod-window-header">Projects</h1>
-                <div class="pod-window-content">
-                    <iframe src="pages/projects.html"></iframe>
-                    <button class="pod-window-button" onclick="music(music_earth), switch_ui(pod_gui_projects, pod_navi)">Go back</button>                    
-                </div>
-            </div>
-            
-            <div class="pod-gui-blog pod-window">
-                    <h1 class="pod-window-header">Blog</h1>
-                <div class="pod-window-content">
-                    <h1 class="pod-window-header">404 not found</h1>
-                    <h1 style="margin-top: -5px;"">You wandered too far sackling...</h1>
-                    <button style="margin-top: -10px;" class="pod-window-button" onclick="music(music_earth), switch_ui(pod_gui_blog, pod_navi)">Go back</button>                    
-                </div>
-            </div>
-
-            <div class="pod-gui-about-me pod-window">
-                    <h1 class="pod-window-header">About me</h1>
-                <div class="pod-window-content">
-                    <iframe src="pages/about_me.html"></iframe>
-                    <button class="pod-window-button" onclick="music(music_earth), switch_ui(pod_gui_about_me, pod_navi)">Go back</button>                    
-                </div>
-            </div>
-
-            <div class="pod-gui-contact pod-window">
-                    <h1 class="pod-window-header">Contact</h1>
-                <div class="pod-window-content">
-                    <iframe src="pages/contact.html"></iframe>
-                    <button class="pod-window-button" onclick="music(music_earth), switch_ui(pod_gui_contact, pod_navi)">Go back</button>                    
-                </div>
-            </div>
-
-            <div class="pod-gui-stuff pod-window">
-                    <h1 class="pod-window-header">Guest Book</h1>
-                <div class="pod-window-content">
-                    <h1 class="pod-window-header">404 not found</h1>
-                    <h1 style="margin-top: -5px;"">You wandered too far sackling...</h1>
-                    <button class="pod-window-button" onclick="music(music_earth), switch_ui(pod_gui_stuff, pod_navi)">Go back</button>                    
-                </div>
-            </div>
-
-            <div class="pod-gui-links pod-window">
-                    <h1 class="pod-window-header">Links</h1>
-                <div class="pod-window-content">
-                    <iframe src="pages/links.html"></iframe>
-                    <button class="pod-window-button" onclick="music(music_earth), switch_ui(pod_gui_links, pod_navi)">Go back</button>                    
-                </div>
-            </div>
-
-            <div class="pod-nav">
-            <ul class="pod-buttons-list">
-                <li style="rotate: 10deg">
-                    <button class="pod-button" style="width: 120%" onclick="music(music_earth), switch_ui(pod_navi, pod_gui_about_me)">About me</button>
-                </li>
-                <li style="rotate: 3deg">
-                    <button class="pod-button" style="width: 100%; position: relative; left: 40px" onclick="music(music_moon), switch_ui(pod_navi, pod_gui_projects)">Projects</button>
-                <li style="rotate: -7deg; padding-top: 10px">
-                    <button class="pod-button" style="width: 150%; position: relative; left: 50px; bottom: 5px" onclick="music(music_earth), switch_ui(pod_navi, pod_gui_blog)">Blog</button>
-                </li>
-            </ul>
-            <div class="polaroid">
-                <img src="images/polaroid.webp">
-                <img src="images/pfp.png" >
-            </div>
-            <ul class="pod-buttons-list">
-                <li style="rotate: -10deg">
-                    <button class="pod-button" style="width: 140%" onclick="music(music_moon), switch_ui(pod_navi, pod_gui_contact)">Contact</button>
-                </li>
-                <li style="rotate: -3deg">
-                    <button class="pod-button" style="width: 100%; position: relative; left: 60px;" onclick="music(music_earth), switch_ui(pod_navi, pod_gui_stuff)">Guest Book</button>
-                <li style="rotate: 7deg;">
-                    <button class="pod-button" style="width: 140%; position: relative; left: 0px;" onclick="music(music_earth), switch_ui(pod_navi, pod_gui_links)">Links</button>
-                </li>
-            </ul>
-            </div>
         </div>
     </body>
 </html>

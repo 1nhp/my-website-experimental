@@ -3,13 +3,16 @@ let isAnyButtonHovered = false;
 document.addEventListener('mouseover', (event) => {
   if (event.target.closest('button')) {
     isAnyButtonHovered = true;
-    playsound("/audio/pod_cursor_move.wav", 0.7)
+    playsound(pod_cursor_move, 0.7)
   }
 });
 
 document.addEventListener('click', (event) => {
-  if (event.target.closest('button')) {
+  if (event.target.closest('button') !== event.target.closest('button#back')) {
     isAnyButtonHovered = true;
-    playsound("/audio/pod_select.wav", 0.7)
+    playsound(pod_select, 0.7)
+  }
+  if (event.target.closest('button#back')) {
+    playsound(pod_back, 0.7)
   }
 });

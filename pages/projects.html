@@ -1,26 +1,40 @@
 <head>
-    <link rel="stylesheet" href="/overlay.css"></link>
-    <link rel="stylesheet" href="/main.css"></link>
-    <script src="/scripts/playsound.js"></script>
-    <script src="/scripts/button.js" defer></script>
+    <link rel="stylesheet" href="/styles/layout/containers.css">
+    <link rel="stylesheet" href="/styles/base/globals.css">
+    <link rel="stylesheet" href="/styles/components/buttons.css">
+    <script src="/scripts/sounds.js"></script>
+    <script src="/scripts/button.js"></script>
 </head>
 
 <body>
-    <div class="iframe-content iframe-content-center">
-    <ul class="pod-buttons-list">
-        <li>
-            <button class="pod-window-button">Mario Bash</button>
-        </li>
-        <li>
-            <button class="pod-window-button">IWPN</button>
-        </li>
-        <li>
-            <button class="pod-window-button">MM Launcher</button>
-        </li>
-        <li>
-            <button class="pod-window-button">TDS Clicker</button>
-        </li>
-    </ul>
+    <div class="iframe iframe-content" style="flex-wrap: wrap; flex-direction: row; gap: 10px; padding: 20px;">
+            <div class="window" style="width: 330px;">
+                <h1 style="padding: 5px; margin-bottom: -5px;">Mario Bash</h1>
+                <div>
+                    <img class="project-img" src="/assets/images/mb_gms2.png"></img>
+                </div>
+                <button style="margin-bottom: 10px;" class="pod-window-button" onclick='window.open("https://glitchyzulfur4.vercel.app/pages/projects/mario-bash.html")'>Check out!</button>
+            </div>
+            <div class="window" style="width: 330px;">
+                <h1 style="padding: 5px; margin-bottom: -5px;">IWPN</h1>
+                <img class="project-img" src="/assets/images/iwpn-logo.png"></img>
+                <button style="margin-bottom: 10px;" class="pod-window-button" onclick='window.open("https://github.com/1nhp/IWPN")'>Check out!</button>
+            </div>
+            <div class="window" style="width: 330px;">
+                <h1 style="padding: 5px; margin-bottom: -5px;">MM Launcher</h1>
+                <img class="project-img" src="https://placehold.co/600x300"></img>
+                <button style="margin-bottom: 10px;" class="pod-window-button" onclick='window.open("https://github.com/1nhp/mario-multiverse-launcher1")'>Check out!</button>
+            </div>
+            <div class="window" style="width: 330px;">
+                <h1 style="padding: 5px; margin-bottom: -5px;">NFSMW05 Fixer</h1>
+                <img class="project-img" src="https://placehold.co/600x300"></img>
+                <button style="margin-bottom: 10px;" class="pod-window-button" onclick='window.open("https://github.com/1nhp/nfsmw2005-cutscene-fixer")'>Check out!</button>
+            </div>
+            <div class="window" style="width: 330px;">
+                <h1 style="padding: 5px; margin-bottom: -5px;">TDS Clicker</h1>
+                <img class="project-img" src="https://placehold.co/600x300"></img>
+                <button style="margin-bottom: 10px;" class="pod-window-button" onclick='window.open("https://maritosu.itch.io/tds-clicker")'>Check out!</button>
+            </div>
     </div>
 
 </body>

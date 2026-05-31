@@ -1,11 +1,10 @@
-const music_amb = new Audio('/audio/pod_ambience.ogg');
+const music_amb = new Audio('/assets/audio/pod_ambience.ogg');
 music_amb.loop = true;
 music_amb.volume = 0
-const music_earth = new Audio('/audio/pod_earth.ogg');
+const music_earth = new Audio('/assets/audio/pod_earth.ogg');
 music_earth.loop = true;
 music_earth.volume = 0
-
-const music_moon = new Audio('/audio/pod_moon.ogg');
+const music_moon = new Audio('/assets/audio/pod_moon.ogg');
 music_moon.loop = true;
 music_moon.volume = 0
 

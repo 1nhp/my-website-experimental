@@ -1,26 +1,19 @@
 <head>
-    <link rel="stylesheet" href="/overlay.css"></link>
-    <link rel="stylesheet" href="/main.css"></link>
-    <script src="/scripts/playsound.js"></script>
-    <script src="/scripts/button.js" defer></script>
+    <link rel="stylesheet" href="/styles/layout/containers.css">
+    <link rel="stylesheet" href="/styles/base/globals.css">
+    <link rel="stylesheet" href="/styles/components/buttons.css">
+    <script src="/scripts/sounds.js"></script>
+    <script src="/scripts/button.js"></script>
 </head>
 
 <body>
     <div class="iframe-content iframe-content-center">
-    <ul class="pod-buttons-list" style="gap: 5px">
-        <li>
+        <div style="width: 256; display: flex; flex-direction: column; gap: 14px">
             <button onclick='window.open("https://www.youtube.com/@GlitchyZulfur4")' class="pod-window-button">YouTube</button>
-        </li>
-        <li>
             <button onclick='window.open("https://x.com/Baldguyakamari/")' class="pod-window-button">Twitter</button>
-        </li>
-        <li>
             <button onclick='window.open("https://bsky.app/profile/glitchyzulfur4.bsky.social/")' class="pod-window-button">Bluesky</button>
-        </li>
-        <li>
             <button onclick='window.open("https://www.reddit.com/user/PhotographSame5304/")' class="pod-window-button">Reddit</button>
-        </li>
+        </div>
     </ul>
     </div>
-
 </body>
