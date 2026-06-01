@@ -60,47 +60,37 @@ function createWindow(id, windowTitle, windowBody) {
     // MENUS
     const windowContentMap = {
         "pod-gui-about-me": () => {
-            const iframe = document.createElement("iframe");
-            iframe.src = "/pages/about_me.html"
             header.textContent = "About me";
-            return iframe;
+            return createIframe("/pages/about_me.html");
         },
         "pod-gui-projects": () => {
             const h1 = document.createElement("h1");
-            const iframe = document.createElement("iframe");
-            iframe.src = "/pages/projects.html"
             header.textContent = "My Projects";
-            return iframe;
+            return createIframe("/pages/projects.html");
         },
         "pod-gui-blog": () => {
             const h1 = document.createElement("h1");
             header.textContent = "My Blog";
             h1.textContent = "Nothing here...";
-            return h1;
+            return [h1];
         },
         "pod-gui-contact": () => {
-            const iframe = document.createElement("iframe");
-            iframe.src = "/pages/contact.html"
             header.textContent = "Contact me";
-            return iframe;
+            return createIframe("/pages/contact.html");
         },
         "pod-gui-guestbook": () => {
-            const iframe = document.createElement("iframe");
             header.textContent = "My Guestbook";
-            iframe.src = "https://glitchyzulfur4.atabook.org/"
-            return iframe;
+            return createIframe("https://glitchyzulfur4.atabook.org");
         },
         "pod-gui-links": () => {
-            const iframe = document.createElement("iframe");
-            header.textContent = "My Links";
-            iframe.src = "/pages/links.html"
-            return iframe;
+            header.textContent = "Links";
+            return createIframe("/pages/links.html");
         },
     };
 
     // Append it from that table
     if (windowContentMap[id]) {
-        content.append(windowContentMap[id]());
+        content.append(...windowContentMap[id]());
     }
 
     // Check
@@ -122,6 +112,26 @@ function createWindow(id, windowTitle, windowBody) {
     content.append(button);
     windowEl.append(header, content);
     parent.appendChild(windowEl);
+
+}
+
+function createIframe(src) {
+    const iframe = document.createElement("iframe");
+    iframe.src = src;
+    iframe.style.transition = "0.3s"
+    iframe.style.transform = ("scale(0)")
+
+    const h1 = document.createElement("h1");
+    h1.classList.add("iframe-loading-heading")
+    h1.textContent = "Downloadinating..."
+
+    iframe.addEventListener("load", () => {
+        playsound(pod_pop, 0.5);
+        iframe.style.transform = ("scale(1)")
+        h1.remove()
+    });
+
+    return [iframe, h1];
 }
 
 //FIXME: This is a little hacky cause im using inline HTML might move to

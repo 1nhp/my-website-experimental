@@ -28,6 +28,10 @@ body{
     font-family: "Eigerdals Heavy";
 }
 
+p{
+  font-size: clamp(0.8rem, 2.5vw, 1.1rem);
+}
+
 #root{
     background: url("/assets/images/pod.png");
     background-repeat: no-repeat;

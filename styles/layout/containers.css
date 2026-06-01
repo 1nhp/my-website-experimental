@@ -13,7 +13,7 @@
     align-items: center;
     justify-content: center;
     padding-right: 70px;
-    transition: 0.4s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 .pod-nav-fade-in{
@@ -26,7 +26,7 @@
     display: flex;
     flex-direction: column;
     background-image: radial-gradient(circle, var(--color-green-pod-window-opaque), var(--color-blue-pod-window-opaque));
-    transition: 0.4s ease-in-out;
+    transition: 0.25s ease-in-out;
     border-radius: 2rem;
     width: 750px; 
     height: 700px;
@@ -91,8 +91,9 @@
 
 iframe{
     border: none;
-    width: 100%;
+    width: 95%;
     height: 80%;
+    border-radius: 14px;
 }
 
 .iframe-content{
@@ -102,8 +103,26 @@ iframe{
     padding: 14px;
 }
 
+.iframe-loading-heading{
+    position: absolute;
+    z-index: 9999;
+    font-size: 40px;
+}
+
 .iframe-content-center{
     align-items: center;
     justify-content: center;
     height: 80vh;
+}
+
+
+/* line that is used for creating dots */
+.line {
+    width: 100%;
+    height: 7px;
+    background:
+        radial-gradient(circle, white, 45%, transparent 45%)
+        repeat-x;
+    background-size: 25px 8px;
+    border: none;
 }
