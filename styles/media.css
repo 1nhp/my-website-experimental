@@ -1,23 +1,20 @@
-@media only screen and (max-width: 750px) {
-    .pod-ui{
-    scale: 0.9;
-  }
+@media only screen and (max-width: 878px) {
+    .pod-ui {
+        scale: 0.9;
+    }
 }
-
-@media only screen and (max-width: 650px) {
-    .pod-ui{
-    scale: 0.8;
-  }
+@media only screen and (max-width: 790px) {
+    .pod-ui {
+        scale: 0.8;
+    }
 }
-
-@media only screen and (max-width: 550px) {
-    .pod-ui{
-    scale: 0.5;
-  }
+@media only screen and (max-width: 706px) {
+    .pod-ui {
+        scale: 0.5;
+    }
 }
-
 @media only screen and (max-width: 360px) {
-    .pod-ui{
-    scale: 0.45;
-  }
+    .pod-ui {
+        scale: 0.45;
+    }
 }

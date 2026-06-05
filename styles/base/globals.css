@@ -1,26 +1,26 @@
 /* Theme colors */
-:root{
+:root {
     --color-green-500: rgb(151, 204, 47);
     --color-green-300: rgb(131, 169, 56);
-    --color-cyan-400:rgb(52, 124, 185);
+    --color-cyan-400: rgb(52, 124, 185);
     --color-cyan-700: rgb(31, 185, 198);
     --color-green-pod-window-opaque: rgb(151, 204, 47, 0.75);
     --color-blue-pod-window-opaque: rgb(52, 124, 185, 0.9);
-    --overlay-gradient: radial-gradient(circle, #1051a1bd, #000000)
+    --overlay-gradient: radial-gradient(circle, #1051a1bd, #000000);
 }
 
 /* Fonts */
 @font-face {
-  font-family: 'Aracne Condensed Regular';
-  src: url("/assets/fonts/AracneCondensedRegular.woff2") format('woff2');
+    font-family: "Aracne Condensed Regular";
+    src: url("/assets/fonts/AracneCondensedRegular.woff2") format("woff2");
 }
 @font-face {
-  font-family: 'Eigerdals Heavy';
-  src: url("/assets/fonts/EigerdalsHeavy.woff2") format('woff2');
+    font-family: "Eigerdals Heavy";
+    src: url("/assets/fonts/EigerdalsHeavy.woff2") format("woff2");
 }
 
 /* Body styling */
-body{
+body {
     user-select: none;
     color: white;
     margin: 0;
@@ -28,12 +28,14 @@ body{
     font-family: "Eigerdals Heavy";
 }
 
-p{
-  font-size: clamp(0.8rem, 2.5vw, 1.1rem);
+/* P font sizes */
+p {
+    font-size: clamp(1.3rem, 2.6vw, 1.3rem);
 }
 
-#root{
+/* P root page background */
+#root {
     background: url("/assets/images/pod.png");
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
 }

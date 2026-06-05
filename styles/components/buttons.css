@@ -1,6 +1,6 @@
 @import url("styles/base/globals.css");
 
-/* Button styling */
+/* Buttons */
 button,
 .img-button {
     border: none;
@@ -21,25 +21,29 @@ button,
 /* Button configurations */
 .pod-button {
     font-size: 370%;
+    position: relative;
+    padding: 10px;
 }
 .pod-window-button {
     font-size: 250%;
-    padding: 0.7vw;
+    padding: 8px;
 }
 
-/* Button styling when its hovered */
+/* Image/Normal Button styling when its hovered */
 button:hover {
     background-color: var(--color-cyan-700);
-    scale: 1.3;
+    scale: 1.35;
     cursor: pointer;
 }
-
 .img-button:hover {
     background-color: var(--color-cyan-700);
+    padding-left: 15px;
+    padding-right: 15px;
     filter: brightness(1.05);
-    scale: 1.25;
+    scale: 1.4;
     rotate: -5deg;
     cursor: pointer;
+    will-change: auto;
 }
 
 /* List for buttons */
@@ -52,4 +56,51 @@ button:hover {
     margin: 0;
     padding: 0;
     list-style-type: none;
+}
+
+/* Pod buttons */
+.about-me-button,
+.contact-button {
+    width: 120%;
+}
+.projects-button,
+.guestbook-button {
+    width: 100%;
+}
+
+.about-me-button {
+    transform: rotate(10deg);
+}
+.projects-button {
+    transform: rotate(3deg);
+    left: 40px;
+}
+.blog-button {
+    transform: rotate(-7deg);
+    left: 50px;
+    width: 150%;
+    bottom: 8px;
+}
+
+.contact-button {
+    transform: rotate(-10deg);
+    width: 140%;
+    right: 50px;
+}
+.guestbook-button {
+    transform: rotate(-3deg);
+    left: 20px;
+}
+.links-button {
+    transform: rotate(7deg);
+    right: 49px;
+    width: 140%;
+    bottom: 2px;
+}
+
+.blog-back-button {
+    margin: 4px;
+    position: sticky;
+    top: 0;
+    font-size: 32px;
 }

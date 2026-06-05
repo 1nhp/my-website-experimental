@@ -1,13 +1,16 @@
 @import url("styles/base/globals.css");
 
-.pod-ui{
+/* Pod ui container that is used for the rest of elements */
+.pod-ui {
     display: flex;
+    width: 100vw;
     height: 100vh;
     justify-content: center;
     align-items: center;
 }
 
-.pod-nav{
+/* Pod nav container */
+.pod-nav {
     display: flex;
     height: 100vh;
     align-items: center;
@@ -16,41 +19,59 @@
     transition: 0.3s ease-in-out;
 }
 
-.pod-nav-fade-in{
-    animation-name: pod-nav-fade-in;
-    animation-duration: 0.7s;
-}
-
-.pod-window{
+/* Pod window container */
+.pod-window {
     position: fixed;
     display: flex;
     flex-direction: column;
-    background-image: radial-gradient(circle, var(--color-green-pod-window-opaque), var(--color-blue-pod-window-opaque));
+    background-image: radial-gradient(
+        circle,
+        var(--color-green-pod-window-opaque),
+        var(--color-blue-pod-window-opaque)
+    );
     transition: 0.25s ease-in-out;
     border-radius: 2rem;
-    width: 750px; 
+    width: 750px;
     height: 700px;
 }
 
-.window{
+.window {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: radial-gradient(circle, var(--color-green-pod-window-opaque), var(--color-blue-pod-window-opaque));
+    background-image: radial-gradient(
+        circle,
+        var(--color-green-pod-window-opaque),
+        var(--color-blue-pod-window-opaque)
+    );
     transition: 0.4s ease-in-out;
     border-radius: 2rem;
 }
 
-.project-img{
+.project-img {
     margin: 8px;
     border-radius: 8px;
     width: 210px;
     height: 100px;
 }
 
-.pod-window-content{
-	display: flex;
+.blog-article-header {
+    font-size: 42px;
+    margin-bottom: 18px;
+}
+.blog-author-date-header-2 {
+    margin-top: -14px;
+}
+.blog-buttons {
+    display: flex;
+    padding-left: 10px;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.pod-window-content {
+    display: flex;
     align-items: center;
     flex: 1;
     justify-content: center;
@@ -58,10 +79,10 @@
     flex-direction: column;
 }
 
-.pod-window-header{
+.pod-window-header {
     display: flex;
     justify-content: flex-start; /* Pushes text to the left side */
-    align-items: flex-start;     /* Pushes text to the top edge */
+    align-items: flex-start; /* Pushes text to the top edge */
     text-align: start;
     font-family: "Aracne Condensed Regular";
     transform: scaleY(1.2);
@@ -69,60 +90,59 @@
     margin: 18px;
 }
 
+/* Polaroid that is used to show my profile picture */
 .polaroid {
     padding-left: 60px;
     position: relative;
     z-index: -1;
 }
 
+/* The first child (polaroid image) */
 .polaroid img:first-child {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
+    rotate: 4deg;
 }
 
+/* Last child will be the second image (my profile picture) */
 .polaroid img:last-child {
     position: absolute;
-    top: 16px;
-    left: 95px;
-    width: 140px;
-    height: 140px;
-    rotate: -1.2deg;
+    top: 21px;
+    left: 105px;
+    width: 171px;
+    height: 173px;
+    rotate: 2.8deg;
 }
 
-iframe{
+/* Iframes self explanatory*/
+iframe {
     border: none;
-    width: 95%;
-    height: 80%;
+    width: 100%;
+    height: 95%;
     border-radius: 14px;
 }
-
-.iframe-content{
+.iframe-content {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    padding: 14px;
+    padding: 8px;
 }
-
-.iframe-loading-heading{
+.iframe-loading-heading {
     position: absolute;
     z-index: 9999;
     font-size: 40px;
 }
-
-.iframe-content-center{
+.iframe-content-center {
     align-items: center;
     justify-content: center;
     height: 80vh;
 }
 
-
 /* line that is used for creating dots */
 .line {
     width: 100%;
     height: 7px;
-    background:
-        radial-gradient(circle, white, 45%, transparent 45%)
-        repeat-x;
+    background: radial-gradient(circle, white, 45%, transparent 45%) repeat-x;
     background-size: 25px 8px;
     border: none;
 }
