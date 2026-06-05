@@ -1,0 +1,28 @@
+<head>
+    <link rel="stylesheet" href="/styles/layout/containers.css" />
+    <link rel="stylesheet" href="/styles/base/globals.css" />
+    <link rel="stylesheet" href="/styles/components/buttons.css" />
+    <script src="/scripts/components/sounds.js" defer></script>
+    <script src="/scripts/components/button.js" defer></script>
+    <script src="/scripts/components/blog.js" defer></script>
+    <script src="/scripts/libraries/purify.js" defer></script>
+    <script src="/scripts/data/blog-data.js" defer></script>
+</head>
+
+<body>
+    <div>
+        <div class="blog-buttons" id="blog-buttons">
+            <button class="pod-window-button img-button" onclick="loadBlog(1)">
+                My First Blog!
+            </button>
+        </div>
+        <div
+            id="blog-content"
+            style="
+                height: 500px; /* Forces a fixed boundary */
+                overflow-y: auto; /* Adds vertical scrollbar only when needed */
+                overflow-x: hidden; /* Prevents horizontal scrolling */
+            "
+        ></div>
+    </div>
+</body>
