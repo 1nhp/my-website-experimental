@@ -21,7 +21,7 @@ async function switch_ui(prev, next, type) {
   // If type is pod nav create pod nav menu
   if (type === "pod") {
     createPodNav();
-    const pod_nav = document.getElementById("pod-nav");
+    const pod_nav = document.getElementById("pod-nav-root");
     // Initial pod nav scale
     if (pod_nav) {
       pod_nav.style.transform = "scale(0)";
@@ -75,7 +75,7 @@ function createWindow(id, windowTitle, windowBody) {
   // When back button is pressed
   button.addEventListener("click", () => {
     music(music_amb);
-    switch_ui(id, "pod-nav", "pod");
+    switch_ui(id, "pod-nav-root", "pod");
   });
 
   // Append button,header,content and Window element
@@ -104,13 +104,16 @@ function createIframe(src) {
   return [iframe, h1];
 }
 
-//FIXED: Use JS DOM functions instead of inline HTML!
-
 // Create Pod Computer navigation menu
 function createPodNav() {
+  const pod_nav_root = document.createElement("div");
+  pod_nav_root.className = "pod-nav-root";
+  pod_nav_root.id = "pod-nav-root";
+  parent.append(pod_nav_root);
+
   const pod_nav = document.createElement("div");
   pod_nav.className = "pod-nav";
-  pod_nav.id = "pod-nav";
+  pod_nav_root.append(pod_nav);
 
   // Left pod buttons list
   const pod_buttons_list = document.createElement("ul");
@@ -141,29 +144,28 @@ function createPodNav() {
   // Create left side buttons
   createPodButton("About me", "about-me-button", () => {
     music(music_earth);
-    switch_ui("pod-nav", "pod-gui-about-me");
+    switch_ui("pod-nav-root", "pod-gui-about-me");
   });
 
   createPodButton("Projects", "projects-button", () => {
     music(music_earth);
-    switch_ui("pod-nav", "pod-gui-projects");
+    switch_ui("pod-nav-root", "pod-gui-projects");
   });
 
   createPodButton("Blog", "blog-button", () => {
     music(music_earth);
-    switch_ui("pod-nav", "pod-gui-blog");
+    switch_ui("pod-nav-root", "pod-gui-blog");
   });
 
-  parent.append(pod_nav);
   pod_nav.appendChild(pod_buttons_list);
 
   const polaroid = document.createElement("div");
   polaroid.className = "polaroid";
   const polaroid_img = document.createElement("img");
-  polaroid_img.src = "/assets/images/polaroid.webp";
+  polaroid_img.src = "/assets/images/ui/polaroid.webp";
 
   const polaroid_pfp_img = document.createElement("img");
-  polaroid_pfp_img.src = "/assets/images/pfp.png";
+  polaroid_pfp_img.src = "/assets/images/ui/pfp.png";
 
   pod_nav.appendChild(polaroid);
   polaroid.appendChild(polaroid_img);
@@ -178,7 +180,7 @@ function createPodNav() {
     "contact-button",
     () => {
       music(music_earth);
-      switch_ui("pod-nav", "pod-gui-contact");
+      switch_ui("pod-nav-root", "pod-gui-contact");
     },
     pod_buttons_list_right,
   );
@@ -188,7 +190,7 @@ function createPodNav() {
     "guestbook-button",
     () => {
       music(music_earth);
-      switch_ui("pod-nav", "pod-gui-guestbook");
+      switch_ui("pod-nav-root", "pod-gui-guestbook");
     },
     pod_buttons_list_right,
   );
@@ -198,12 +200,32 @@ function createPodNav() {
     "links-button",
     () => {
       music(music_earth);
-      switch_ui("pod-nav", "pod-gui-links");
+      switch_ui("pod-nav-root", "pod-gui-links");
     },
     pod_buttons_list_right,
   );
 
   pod_nav.appendChild(pod_buttons_list_right);
+
+  // Updates container
+  const updatesContainer = document.createElement("div");
+  updatesContainer.className = "updates-container";
+
+  const updatesHeader = document.createElement("h1");
+  updatesHeader.textContent = "Updates";
+  updatesHeader.className = "updates-header";
+
+  // Line
+  const line = document.createElement("div");
+  line.className = "line";
+
+  const updateBody = document.createElement("p");
+
+  // TODO: Make this dynamic and fetch updates from a file or database instead of hardcoding it
+  updateBody.textContent = "Nintendo Direct is about to be premiered!";
+
+  updatesContainer.append(updatesHeader, line, updateBody);
+  pod_nav_root.appendChild(updatesContainer);
 }
 
 // Removes a menu element by ID

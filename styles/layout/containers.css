@@ -7,16 +7,37 @@
     height: 100vh;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 /* Pod nav container */
+.pod-nav-root {
+    transition: 0.3s ease-in-out;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .pod-nav {
     display: flex;
-    height: 100vh;
     align-items: center;
     justify-content: center;
     padding-right: 70px;
     transition: 0.3s ease-in-out;
+}
+
+.updates-container {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    width: 29%;
+    padding-right: 50px;
+}
+
+.updates-header {
+    margin-bottom: 4px;
 }
 
 /* Pod window container */
@@ -54,6 +75,14 @@
     border-radius: 8px;
     width: 210px;
     height: 100px;
+}
+
+.project-name-header {
+    padding-left: 10;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .blog-article-header {

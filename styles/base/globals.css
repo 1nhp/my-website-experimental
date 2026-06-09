@@ -33,9 +33,12 @@ p {
     font-size: clamp(1.3rem, 2.6vw, 1.3rem);
 }
 
-/* P root page background */
-#root {
-    background: url("/assets/images/pod.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+.bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: fill;
+    z-index: -1;
 }

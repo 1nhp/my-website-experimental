@@ -1,7 +1,7 @@
 // Cache overlay elements
 const overlaycontent = document.querySelector(".overlay-content");
 const overlay = document.querySelector(".overlay");
-
+const bg_video = document.querySelector(".bg-video");
 const music_toggle = true;
 let overlayclicked = false;
 
@@ -24,7 +24,8 @@ window.addEventListener("click", async () => {
       music(music_amb);
 
       createPodNav();
-      switch_ui("pod-nav", "pod-nav", "pod");
+      bg_video.play();
+      switch_ui("pod-nav-root", "pod-nav-root", "pod");
 
       await delay(400);
       overlay.remove();
