@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Mario Bash",
+    "release_date": "January 10th, 2026",
+    "icon": "/assets/images/projects/mb_gms2.png",
+    "link":"https://glitchyzulfur4.vercel.app/pages/projects/mario-bash.html"
+  },
+  {
+   "name": "IWPN",
+   "release_date": "Unknown",
+   "icon": "/assets/images/projects/iwpn.png",
+   "link":"https://github.com/1nhp/iwpn"
+  },
+  {
+    "name": "Switch 1 Homemenu Remake",
+    "release_date": "July 13th, 2025",
+    "icon": "/assets/images/projects/sw1_hmr.png",
+    "link":"https://github.com/1nhp/switch1homemenuremake-gms2"
+  },
+  {
+    "name": "Mario Multiverse Launcher",
+    "release_date": "February 27th, 2026",
+    "icon": "/assets/images/projects/mm_launcher.png",
+    "link":"https://github.com/1nhp/mario-multiverse-launcher1"
+  },
+  {
+    "name": "TDS Clicker",
+    "release_date": "March 20th, 2026",
+    "icon": "/assets/images/projects/tds_clicker.png",
+    "link":"https://maritosu.itch.io/tds-clicker"
+  },
+  {
+    "name": "NFSMW Cutscene Fixer",
+    "release_date": "March 9th, 2026",
+    "icon": "/assets/images/projects/placeholder.png",
+    "link":"https://github.com/1nhp/nfsmw2005-cutscene-fixer"
+  },
+  {
+    "name": "This website!",
+    "release_date": "June 1th, 2026",
+    "icon": "/assets/images/projects/site.png",
+    "link":"https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+  }
+]
