@@ -222,7 +222,7 @@ function createPodNav() {
   const updateBody = document.createElement("p");
 
   // TODO: Make this dynamic and fetch updates from a file or database instead of hardcoding it
-  updateBody.textContent = "Nintendo Direct is going!!";
+  updateBody.textContent = "None.";
 
   updatesContainer.append(updatesHeader, line, updateBody);
   pod_nav_root.appendChild(updatesContainer);
